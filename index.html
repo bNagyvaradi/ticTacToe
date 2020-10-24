@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+	<link rel="icon" href="icon.png">
+	<title>Tic Tac Toe</title>
+</head>
+<body>
+	<div class="title">
+		<h1>Tic Tac Toe</h1>
+		<p>Play against the computer on different boards! While the random AI selects a cell randomly, the other AI type uses the MiniMax algorithm, therefore, it is impossible to beat.</p>
+	</div>
+	<div class="content">
+		<div class="options">
+			<div class="grid-size">
+				<p>Select board size:</p>
+				<a id="3" onclick="changeSize(3)">3x3</a>
+				<a id="4" onclick="changeSize(4)">4x4</a>
+				<a id="5" onclick="changeSize(5)">5x5</a>
+				<div class="size-selector"></div>
+			</div>
+			<div class="ai-type">
+				<p>Select AI type:</p>
+				<a id="random" onclick="changeAI('random')">Random</a>
+				<a id="minimax" onclick="changeAI('minimax')">MiniMax Algorithm</a>
+				<div class="ai-selector"></div>
+			</div>
+			<div class="start-button">
+				<a onclick="startGame()">New Game</a>
+			</div>
+		</div>
+		<div class="container">
+			<div class="grid">
+				<!-- grid is set by JS -->
+			</div>
+			<p>You ✘<span>-</span>AI ◯</p>
+			<div class="results">
+				<div class="won">0</div>
+				<div class="tied">0</div>
+				<div class="lost">0</div>
+			</div>
+		</div>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
